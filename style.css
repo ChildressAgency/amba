@@ -1,0 +1,189 @@
+/*
+  Theme Name: Association of Military Banks of America
+  Theme Author: The Childress Agency
+  Theme Author URI: https://childressagency.com
+  Version: 1.0
+*/
+
+body{
+  font-size:16px;
+  font-family:"Quattrocento Sans", sans-serif;
+  color:#000;
+}
+
+button:focus{
+  outline:none;
+}
+a, input{
+  transition:all .3s ease;
+}
+h1{
+  font-family:"Quattrocento", serif;
+  font-size:36px;
+  font-weight:700;
+}
+
+.btn-main{
+  background-color:#faca3d;
+  color:#000;
+  font-weight:700;
+  text-transform:uppercase;
+  padding:10px 40px;
+  display:inline-block;
+  margin-top:25px;
+}
+.btn-main:hover,
+.btn-main:focus{
+  background-color:#fff;
+  color:#000;
+  text-decoration:none;
+}
+
+.navbar{
+  padding:1rem;
+}
+
+.navbar-toggler{
+  border-color:#000;
+  font-size:24px;
+  padding-top:6px;
+}
+
+.brand-info p{
+  color:#2b5aa7;
+  line-height:1.2em;
+}
+.brand-info p>span{
+  color:#bf212a;
+  font-family:"Quattrocento", serif;
+  font-weight:700;
+  display:block;
+}
+.brand-info .brand-name{
+  margin-bottom:3px;
+  padding-bottom:3px;
+  border-bottom:2px solid #fce49e;
+  display:inline-block;
+}
+.brand-info p.slogan{
+  font-size:22px;
+  font-style:italic;
+  font-weight:700;
+}
+.brand-info p.slogan>span{
+  display:inline;
+  font-family:"Quattrocento Sans", sans-serif;
+}
+
+#header-nav .nav-link{
+  color:#000;
+  font-size:18px;
+}
+#header-nav .nav-link.dropdown-toggle{
+  white-space:nowrap !important;
+}
+#header-nav .dropdown-toggle::after{
+  color:#2b5aa7;
+  vertical-align:.055em;
+  border-top:.5em solid;
+}
+
+.hero{
+  min-height:694px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+}
+.hero-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(0,0,0,.5);
+  z-index:1;
+}
+.hero-caption{
+  z-index:2;
+  position:absolute;
+  max-width:470px;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  color:#fff;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:right;
+}
+.hero-caption h2{
+  font-size:28px;
+  font-family:"Quattrocento", serif;
+  font-weight:700;
+  margin-bottom:25px;
+}
+.hero-caption h2>small{
+  color:#fff;
+  font-size:20px;
+  font-family:"Quattrocento Sans", sans-serif;
+  font-style:italic;
+  display:block;
+}
+.hero-caption p{
+  font-size:20px;
+  line-height:1.2em;
+}
+
+#hp-about{
+  padding-top:60px;
+  padding-bottom:80px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#hp-about article{
+  color:#fff;
+}
+
+#workshop{
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#workshop .text-side{
+  background-color:rgba(0,0,0,.5);
+  padding-top:60px;
+  padding-bottom:60px;
+}
+#workshop article{
+  color:#fff;
+}
+h2.workshop-meta{
+  font-size:20px;
+  font-family:"Quattrocentro Sans", sans-serif;
+  text-transform:uppercase;
+}
+
+
+@media (min-width:992px){
+  #header-nav .nav-item{
+    text-align:center;
+  }
+  #header-nav .navbar-nav{
+    -ms-flex-align:center !important;
+    align-items:center !important;
+  }
+}
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
