@@ -39,6 +39,7 @@ h1{
 
 #header-nav{
   padding-top:20px;
+  padding-bottom:20px;
 }
 
 .brand-info p{
@@ -92,6 +93,281 @@ h1{
   background-color:#000;
 }
 
+.hero{
+  min-height:694px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  position:relative;
+}
+.hero-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(0,0,0,.5);
+  z-index:1;
+}
+.hero-caption{
+  z-index:2;
+  position:absolute;
+  max-width:470px;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  color:#fff;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:right;
+  margin-right:10%;
+}
+.hero-caption h2{
+  font-size:28px;
+  font-family:"Quattrocento", serif;
+  font-weight:700;
+  margin-bottom:25px;
+}
+.hero-caption h2>small{
+  color:#fff;
+  font-size:20px;
+  font-family:"Quattrocento Sans", sans-serif;
+  font-style:italic;
+  display:block;
+}
+.hero-caption p{
+  font-size:20px;
+  line-height:1.2em;
+}
+
+#hp-about{
+  padding-top:60px;
+  padding-bottom:80px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#hp-about article{
+  color:#fff;
+}
+
+#workshop{
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#workshop .text-side{
+  background-color:rgba(0,0,0,.5);
+  padding-top:60px;
+  padding-bottom:60px;
+}
+#workshop article{
+  color:#fff;
+}
+h2.workshop-meta{
+  font-size:20px;
+  font-family:"Quattrocentro Sans", sans-serif;
+  text-transform:uppercase;
+}
+#find-bank{
+  margin-top:40px;
+  margin-bottom:130px;
+}
+#find-bank .container{
+  background-color:#b57d2b;
+}
+#find-bank h2{
+  font-family:"Quattrocentro", serif;
+  font-weight:700;
+  font-size:36px;
+  text-transform:uppercase;
+  color:#fff;
+  margin-top:40px;
+  margin-bottom:40px;
+  padding-top:15px;
+  padding-bottom:15px;
+  border-top:2px solid #faca3d;
+  border-bottom:2px solid #faca3d;
+}
+
+#newsletter-signup{
+  margin-top:40px;
+  margin-bottom:80px;
+}
+#newsletter-signup .container{
+  background-color:#223c7d;
+}
+.newsletter-form{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+.newsletter-form h2{
+  font-family:"Quattrocentro", serif;
+  font-weight:700;
+  font-size:36px;
+  text-transform:uppercase;
+  color:#fff;
+}
+
+.btn-signup{
+  background-color:#faca3d;
+  border:none;
+  padding:6px 20px;
+  font-weight:700;
+  font-size:16px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+.btn-signup:hover,
+.btn-signup:focus{
+  background-color:#ccc;
+}
+
+#blog-summary{
+  padding-top:60px;
+  padding-bottom:100px;
+}
+#blog-summary h2{
+  font-family:"Quattrocento", serif;
+  font-size:36px;
+  font-weight:700;
+  color:#000;
+}
+.blog-card{
+  position:relative;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  padding:20px;
+}
+.card-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(0,0,0,.66);
+  z-index:1;
+}
+.card-header,
+.card-body{
+  position:relative;
+  z-index:3;
+}
+.btn-cat{
+  color:#fff;
+  font-size:20px;
+  font-weight:700;
+  text-transform:uppercase;
+  padding:3px 15px;
+}
+.btn-cat:hover,
+.btn-cat:focus{
+  background-color:#ccc !important;
+  color:#000;
+  text-decoration:none;
+}
+#blog-summary .card-body>a{
+  color:#fff;
+  font-family:"Quattrocento", serif;
+  font-weight:700;
+  font-size:28px;
+}
+#blog-summary .card-body>a>h3{
+  font-size:inherit;
+  margin-top:30px;
+}
+#blog-summary .card-body>p{
+  color:#fff;
+  text-transform:uppercase;
+}
+
+#footer-nav{
+  background-color:#2b5aa7;
+}
+#footer-nav .container-fluid{
+  padding-right:0px;
+}
+#footer-nav .social{
+  background-color:#e7e9ea;
+  padding:25px;
+}
+#footer-nav .social p{
+  font-weight:700;
+  text-transform:uppercase;
+  margin-bottom:0;
+}
+#footer-nav .social a{
+  color:#213b7d;
+  font-size:40px;
+}
+#footer-nav .social a+a{
+  padding-left:10px;
+}
+#footer-nav .social a:hover,
+#footer-nav .social a:focus{
+  color:#faca3d;
+}
+#footer-nav ul>li>h4{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-align:center;
+}
+#footer-nav ul.list-inline>li{
+  vertical-align:top;
+  margin-top:20px;
+  padding-left:10px;
+  padding-right:10px;
+}
+#footer-nav .footer-logo>img{
+  margin-top:25px;
+}
+#footer-nav ul li a{
+  color:#fff;
+  font-size:14px;
+}
+
+#copyright{
+  text-align:center;
+  background-color:#223c7d;
+  padding-top:25px;
+  padding-bottom:25px;
+  font-size:14px;
+  color:#fff;
+}
+#copyright p{
+  margin-bottom:0;
+}
+#copyright a{
+  color:#fff;
+}
+#copyright ul.list-inline>li{
+  padding-right:10px;
+  box-shadow:3px 0px 0px -2px #fff;
+}
+#copyright ul.list-inline>li:last-child{
+  box-shadow:none;
+  padding-right:0;
+}
+
+
+@media (max-width:767px){
+  #navbar{
+    margin-top:40px;
+  }
+  .hero-caption{
+    margin-right:3%;
+  }
+  #workshop .image-side img{
+    margin:20px auto;
+  }
+  #hp-about .image-side img{
+    margin-top:25px;
+  }
+  .blog-card{
+    margin:25px 15px;
+  }
+}
 
 @media (min-width:768px){
   .container-sm-height{
@@ -106,10 +382,34 @@ h1{
     float:none;
     vertical-align:middle;
   }
+  #workshop .image-side img{
+    float:right;
+  }
+  #blog-summary .container-sm-height{
+    border-spacing:15px 0px;
+  }
+  #blog-summary .col-sm-height{
+    vertical-align: top;
+  }
 }
 
-@media (max-width:767px){
-  #navbar{
-    margin-top:40px;
+@media (max-width:991px){
+  #find-bank{
+    margin-bottom:0;
+  }
+  #find-bank .container{
+    padding-top:25px;
+    padding-bottom:25px;
+  }
+  #newsletter-signup .container{
+    padding-top:25px;
+    padding-bottom:25px;
+  }
+}
+
+@media (min-width:992px){
+  .platter-icon{
+    position:absolute;
+    top:20px;
   }
 }
