@@ -65,6 +65,7 @@
 
           if($workshop_section_img_url): ?>
             <img src="<?php echo esc_url($workshop_section_img_url); ?>" class="img-responsive" alt="<?php echo esc_attr($workshop_section_img_alt); ?>" />
+        <?php endif; ?>
       </div>
       <div class="col-sm-6 col-sm-pull-6 col-sm-height text-side">
         <article>
@@ -148,7 +149,7 @@
                   $cats = get_the_category(); 
                   $cat_color = get_field('category_color', 'category_' . $cats[0]->term_id);
                 ?>
-                <a href="<?php echo esc_url(get_category_link($cats[0]->term_id); ?>" class="btn-cat" style="background-color:<?php echo $cat_color; ?>"><?php echo esc_html($cats[0]->name); ?></a>
+                <a href="<?php echo esc_url(get_category_link($cats[0]->term_id)); ?>" class="btn-cat" style="background-color:<?php echo $cat_color; ?>"><?php echo esc_html($cats[0]->name); ?></a>
               </div>
               <div class="card-body">
                 <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>

@@ -49,7 +49,7 @@
                 'fallback_cb' => 'tol_header_fallback_menu',
                 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 'depth' => 2,
-                'walker' => new wp_bootstrap_navwalker();
+                'walker' => new wp_bootstrap_navwalker()
               );
               wp_nav_menu($header_nav_args);
             ?>

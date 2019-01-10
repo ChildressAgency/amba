@@ -84,7 +84,7 @@
                       $footer_nav_5_title = $footer_nav_5 ? esc_html($footer_nav_5->name) : '';
                       $footer_nav_5_args = array(
                         'theme_location' => 'footer-nav-5',
-                        'menu' => 'Footer Navigation 5'
+                        'menu' => 'Footer Navigation 5',
                         'container' => 'li',
                         'container_id' => '',
                         'container_class' => '',

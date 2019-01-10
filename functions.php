@@ -13,17 +13,17 @@ function tol_child_enqueue_styles(){
 
   wp_enqueue_style(
     'font-awesome',
-    '//use.fontawesome.com/releases/v5.1.0/css/all.css'
-  )
+    '//use.fontawesome.com/releases/v5.6.3/css/all.css'
+  );
 
   wp_enqueue_style(
     'parent-style', 
-    get_template_directory() . '/style.css'
+    get_template_directory_uri() . '/style.css'
   );
 
   wp_enqueue_style(
     'child-style', 
-    get_stylesheet_directory() . '/style.css',
+    get_stylesheet_directory_uri() . '/style.css',
     array('parent-style'),
     wp_get_theme()->get('Version')
   );
@@ -33,7 +33,7 @@ function tol_child_enqueue_styles(){
 add_filter('style_loader_tag', 'tol_add_css_meta', 10, 2);
 function tol_add_css_meta($link, $handle){
   if($handle == 'bootstrap-css'){
-    $link = str_replace('/>', ' integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />', $link);
+    $link = str_replace('/>', ' integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />', $link);
   }
   elseif($handle == 'font-awesome'){
     $link = str_replace('/>', ' integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />', $link);
@@ -54,7 +54,7 @@ function tol_setup(){
     'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child')
   ));
 
-  load_child_theme_text_domain('tol_child', get_stylesheet_directory() . '/languages');
+  load_child_theme_textdomain('tol_child', get_stylesheet_directory() . '/languages');
 }
 
 function tol_header_fallback_menu(){ ?>
