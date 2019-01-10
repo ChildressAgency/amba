@@ -43,6 +43,17 @@ function tol_add_css_meta($link, $handle){
 }
 
 remove_action('after_theme_setup', 'tol_custom_header_setup');
+add_action('after_setup_theme', 'tol_setup');
+function tol_setup(){
+  register_nav_menus(array(
+    'header-nav' => 'Header Navigation',
+    'footer-nav-1' => 'Footer Navigation 1',
+    'footer-nav-2' => 'Footer Navigation 2',
+    'footer-nav-3' => 'Footer Navigation 3',
+    'footer-nav-4' => 'Footer Navigation 4',
+    'footer-nav-5' => 'Footer Navigation 5'
+  ));
+}
 
 function tol_header_fallback_menu(){ ?>
   <nav id="navbar" class="navbar-collapse collapse">
@@ -83,3 +94,22 @@ function tol_header_fallback_menu(){ ?>
     </ul>
   </nav>
 <?php }
+
+function tol_copyright_fallback_menu(){ ?>
+  <ul class="list-inline">
+    <li>AMBA &copy;<?php echo date('Y'); ?></li>
+    <li><a href="<?php echo esc_url(home_url('privacy-policy')); ?>">Privacy Policy</a></li>
+    <li><a href="<?php echo esc_url(home_url('cookie-policy')); ?>">Cookie Policy</a></li>
+    <li><a href="<?php echo esc_url(home_url('contact-us')); ?>">Contact Us</a></li>
+  </ul>
+<?php }
+
+function tol_get_menu_by_location($location){
+  if(empty($location)){ return false; }
+
+  $locations = get_nav_menu_locations();
+  if(!isset($locations[$location])){ return false; }
+
+  $menu_obj = get_term($locations[$location], 'nav_menu');
+  return $menu_obj;
+}
