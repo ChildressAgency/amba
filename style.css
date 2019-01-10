@@ -222,8 +222,10 @@ h2.workshop-meta{
 }
 
 #blog-summary{
-  padding-top:60px;
-  padding-bottom:100px;
+  padding-top:40px;
+  padding-bottom:60px;
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 #blog-summary h2{
   font-family:"Quattrocento", serif;
@@ -231,12 +233,21 @@ h2.workshop-meta{
   font-weight:700;
   color:#000;
 }
+.blog-cards{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+}
 .blog-card{
   position:relative;
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
   padding:20px;
+  width:320px;
+  margin:15px;
 }
 .card-overlay{
   position:absolute;
@@ -282,9 +293,6 @@ h2.workshop-meta{
 
 #footer-nav{
   background-color:#2b5aa7;
-}
-#footer-nav .container-fluid{
-  padding-right:0px;
 }
 #footer-nav .social{
   background-color:#e7e9ea;
@@ -372,6 +380,8 @@ h2.workshop-meta{
 @media (min-width:768px){
   .container-sm-height{
     display:table;
+  }
+  .container-fluid.container-sm-height{
     width:100%;
   }
   .row-sm-height{
@@ -390,6 +400,9 @@ h2.workshop-meta{
   }
   #blog-summary .col-sm-height{
     vertical-align: top;
+  }
+  #footer-nav .container-fluid{
+    padding-right:0px;
   }
 }
 
