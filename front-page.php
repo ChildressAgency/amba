@@ -72,7 +72,7 @@
           <h2 class="workshop-meta">
             <?php echo esc_html(get_field('workshop_section_date')); ?>
             <br />
-            <?php echo esc_html(get_field('workshop_section_location')); ?>
+            <?php echo wp_kses_post(get_field('workshop_section_location')); ?>
           </h2>
           <?php echo wp_kses_post(get_field('workshop_section_description')); ?>
           <?php

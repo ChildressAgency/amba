@@ -18,12 +18,12 @@ function tol_child_enqueue_styles(){
 
   wp_enqueue_style(
     'parent-style', 
-    get_template_directory_uri() . '/style.css'
+    get_template_directory() . '/style.css'
   );
 
   wp_enqueue_style(
     'child-style', 
-    get_stylesheet_directory_uri() . '/style.css',
+    get_stylesheet_directory() . '/style.css',
     array('parent-style'),
     wp_get_theme()->get('Version')
   );
@@ -46,13 +46,15 @@ remove_action('after_theme_setup', 'tol_custom_header_setup');
 add_action('after_setup_theme', 'tol_setup');
 function tol_setup(){
   register_nav_menus(array(
-    'header-nav' => 'Header Navigation',
-    'footer-nav-1' => 'Footer Navigation 1',
-    'footer-nav-2' => 'Footer Navigation 2',
-    'footer-nav-3' => 'Footer Navigation 3',
-    'footer-nav-4' => 'Footer Navigation 4',
-    'footer-nav-5' => 'Footer Navigation 5'
+    'header-nav' => esc_html__('Header Navigation', 'tol_child'),
+    'footer-nav-1' => esc_html__('Footer Navigation 1', 'tol_child'),
+    'footer-nav-2' => esc_html__('Footer Navigation 2', 'tol_child'),
+    'footer-nav-3' => esc_html__('Footer Navigation 3', 'tol_child'),
+    'footer-nav-4' => esc_html__('Footer Navigation 4', 'tol_child'),
+    'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child')
   ));
+
+  load_child_theme_text_domain('tol_child', get_stylesheet_directory() . '/languages');
 }
 
 function tol_header_fallback_menu(){ ?>
@@ -113,3 +115,5 @@ function tol_get_menu_by_location($location){
   $menu_obj = get_term($locations[$location], 'nav_menu');
   return $menu_obj;
 }
+
+require_once dirname(__FILE__) . '/includes/tol-acf-setup.php';
