@@ -11,91 +11,121 @@
                 </div>
                 <div class="col-sm-10">
                   <ul class="list-inline text-center">
-                    <?php
-                      $footer_nav_1 = tol_get_menu_by_location('footer-nav-1');
-                      $footer_nav_1_title = $footer_nav_1 ? esc_html($footer_nav_1->name) : '';
-                      $footer_nav_1_args = array(
-                        'theme_location' => 'footer-nav-1',
-                        'menu' => 'Footer Navigation 1',
-                        'container' => 'li',
-                        'container_id' => '',
-                        'container_class' => '',
-                        'menu_class' => 'list-unstyled',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<h4>' . $footer_nav_1_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 1
-                      );
-                      wp_nav_menu($footer_nav_1_args);
+                    <?php 
+                      if(has_nav_menu('footer-nav-1')){
+                        echo '<li>';
 
-                      $footer_nav_2 = tol_get_menu_by_location('footer-nav-2');
-                      $footer_nav_2_title = $footer_nav_2 ? esc_html($footer_nav_2->name) : '';
-                      $footer_nav_2_args = array(
-                        'theme_location' => 'footer-nav-2',
-                        'menu' => 'Footer Navigation 2',
-                        'container' => 'li',
-                        'container_id' => '',
-                        'container_class' => '',
-                        'menu_class' => 'list-unstyled',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<h4>' . $footer_nav_2_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 1
-                      );
-                      wp_nav_menu($footer_nav_2_args);
+                        $footer_nav_1 = tol_get_menu_by_location('footer-nav-1');
+                        $footer_nav_1_title = $footer_nav_1 ? esc_html($footer_nav_1->name) : '';
+                        $footer_nav_1_args = array(
+                          'theme_location' => 'footer-nav-1',
+                          'menu' => 'Footer Navigation 1',
+                          'container' => 'li',
+                          'container_id' => '',
+                          'container_class' => '',
+                          'menu_class' => 'list-unstyled',
+                          'menu_id' => '',
+                          'echo' => true,
+                          'fallback_cb' => false,
+                          'items_wrap' => '<h4>' . $footer_nav_1_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
+                          'depth' => 1
+                        );
+                        wp_nav_menu($footer_nav_1_args);
 
-                      $footer_nav_3 = tol_get_menu_by_location('footer-nav-3');
-                      $footer_nav_3_title = $footer_nav_3 ? esc_html($footer_nav_3->name) : '';
-                      $footer_nav_3_args = array(
-                        'theme_location' => 'footer-nav-3',
-                        'menu' => 'Footer Navigation 3',
-                        'container' => 'li',
-                        'container_id' => '',
-                        'container_class' => '',
-                        'menu_class' => 'list-unstyled',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<h4>' . $footer_nav_3_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 1
-                      );
-                      wp_nav_menu($footer_nav_3_args);
+                        echo '</li>';
+                      }
 
-                      $footer_nav_4 = tol_get_menu_by_location('footer-nav-4');
-                      $footer_nav_4_title = $footer_nav_4 ? esc_html($footer_nav_4->name) : '';
-                      $footer_nav_4_args = array(
-                        'theme_location' => 'footer-nav-4',
-                        'menu' => 'Footer Navigation 4',
-                        'container' => 'li',
-                        'container_id' => '',
-                        'container_class' => '',
-                        'menu_class' => 'list-unstyled',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<h4>' . $footer_nav_4_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 1
-                      );
-                      wp_nav_menu($footer_nav_4_args);
+                      if(has_nav_menu('footer-nav-2')){
+                        echo '<li>';
 
-                      $footer_nav_5 = tol_get_menu_by_location('footer-nav-5');
-                      $footer_nav_5_title = $footer_nav_5 ? esc_html($footer_nav_5->name) : '';
-                      $footer_nav_5_args = array(
-                        'theme_location' => 'footer-nav-5',
-                        'menu' => 'Footer Navigation 5',
-                        'container' => 'li',
-                        'container_id' => '',
-                        'container_class' => '',
-                        'menu_class' => 'list-unstyled',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => false,
-                        'items_wrap' => '<h4>' . $footer_nav_5_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'depth' => 1
-                      );
-                      wp_nav_menu($footer_nav_5_args);
+                        $footer_nav_2 = tol_get_menu_by_location('footer-nav-2');
+                        $footer_nav_2_title = $footer_nav_2 ? esc_html($footer_nav_2->name) : '';
+                        $footer_nav_2_args = array(
+                          'theme_location' => 'footer-nav-2',
+                          'menu' => 'Footer Navigation 2',
+                          'container' => 'li',
+                          'container_id' => '',
+                          'container_class' => '',
+                          'menu_class' => 'list-unstyled',
+                          'menu_id' => '',
+                          'echo' => true,
+                          'fallback_cb' => false,
+                          'items_wrap' => '<h4>' . $footer_nav_2_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
+                          'depth' => 1
+                        );
+                        wp_nav_menu($footer_nav_2_args);
+
+                        echo '</li>';
+                      }
+
+                      if(has_nav_menu('footer-nav-3')){
+                        echo '<li>';
+
+                        $footer_nav_3 = tol_get_menu_by_location('footer-nav-3');
+                        $footer_nav_3_title = $footer_nav_3 ? esc_html($footer_nav_3->name) : '';
+                        $footer_nav_3_args = array(
+                          'theme_location' => 'footer-nav-3',
+                          'menu' => 'Footer Navigation 3',
+                          'container' => 'li',
+                          'container_id' => '',
+                          'container_class' => '',
+                          'menu_class' => 'list-unstyled',
+                          'menu_id' => '',
+                          'echo' => true,
+                          'fallback_cb' => false,
+                          'items_wrap' => '<h4>' . $footer_nav_3_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
+                          'depth' => 1
+                        );
+                        wp_nav_menu($footer_nav_3_args);
+
+                        echo '</li>';
+                      }
+
+                      if(has_nav_menu('footer-nav-4')){
+                        echo '<li>';
+                      
+                        $footer_nav_4 = tol_get_menu_by_location('footer-nav-4');
+                        $footer_nav_4_title = $footer_nav_4 ? esc_html($footer_nav_4->name) : '';
+                        $footer_nav_4_args = array(
+                          'theme_location' => 'footer-nav-4',
+                          'menu' => 'Footer Navigation 4',
+                          'container' => 'li',
+                          'container_id' => '',
+                          'container_class' => '',
+                          'menu_class' => 'list-unstyled',
+                          'menu_id' => '',
+                          'echo' => true,
+                          'fallback_cb' => false,
+                          'items_wrap' => '<h4>' . $footer_nav_4_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
+                          'depth' => 1
+                        );
+                        wp_nav_menu($footer_nav_4_args);
+                      
+                        echo '</li>';
+                      }
+
+                      if(has_nav_menu('footer-nav-5')){
+                        echo '<li>';
+                      
+                        $footer_nav_5 = tol_get_menu_by_location('footer-nav-5');
+                        $footer_nav_5_title = $footer_nav_5 ? esc_html($footer_nav_5->name) : '';
+                        $footer_nav_5_args = array(
+                          'theme_location' => 'footer-nav-5',
+                          'menu' => 'Footer Navigation 5',
+                          'container' => 'li',
+                          'container_id' => '',
+                          'container_class' => '',
+                          'menu_class' => 'list-unstyled',
+                          'menu_id' => '',
+                          'echo' => true,
+                          'fallback_cb' => false,
+                          'items_wrap' => '<h4>' . $footer_nav_5_title . '</h4><ul id="%1$s" class="%2$s">%3$s</ul>',
+                          'depth' => 1
+                        );
+                        wp_nav_menu($footer_nav_5_args);
+                      
+                        echo '</li>';
+                      }
                     ?>
                   </ul>
                 </div>
