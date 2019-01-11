@@ -20,6 +20,11 @@ h1{
   font-size:36px;
   font-weight:700;
 }
+img{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
 
 .btn-main{
   background-color:#faca3d;
@@ -29,6 +34,9 @@ h1{
   padding:10px 40px;
   display:inline-block;
   margin-top:25px;
+}
+.btn-main:visited{
+  color:#000;
 }
 .btn-main:hover,
 .btn-main:focus{
@@ -85,9 +93,17 @@ h1{
 #navbar .nav a>.caret{
   margin-left:5px;
 }
+.dropdown .dropdown-menu{
+  left:auto;
+  background-color:#fff;
+}
+#navbar .dropdown-menu>li>a{
+  font-size:16px;
+}
 
 .navbar-toggle{
   border-color:#000;
+  background-color:#fff !important;
 }
 .navbar-toggle .icon-bar{
   background-color:#000;
@@ -205,6 +221,41 @@ h2.workshop-meta{
   text-transform:uppercase;
   color:#fff;
 }
+.newsletter-form fieldset{
+  border:none;
+  padding:0;
+  margin:0;
+}
+.newsletter-form label[for="field_ye1zv"]{
+  border:0;
+  clip:rect(0,0,0,0);
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+}
+.newsletter-form input[type="email"]{
+  width:100%;
+  margin-bottom:15px;
+  padding:5px 15px;
+  border-radius:0;
+}
+.newsletter-form .g-recaptcha>div{
+  margin:0px auto 15px;
+}
+.newsletter-form input[type="submit"]{
+  background-color:#faca3d !important;
+  color:#000 !important;
+  font-weight:700;
+  text-transform:uppercase;
+  border:none;
+  border-radius:0;
+}
+.newsletter-form input[type="submit"]:hover,
+.newsletter-form input[type="submit"]:focus{
+  background-color:#ccc !important;
+}
 
 .btn-signup{
   background-color:#faca3d;
@@ -291,6 +342,10 @@ h2.workshop-meta{
   text-transform:uppercase;
 }
 
+footer#footer{
+  padding:0;
+  margin-top:0;
+}
 #footer-nav{
   background-color:#2b5aa7;
 }
@@ -320,6 +375,7 @@ h2.workshop-meta{
   text-transform:uppercase;
   font-weight:700;
   text-align:center;
+  font-family:"Quattrocento Sans", sans-serif;
 }
 #footer-nav ul.list-inline>li{
   vertical-align:top;
@@ -333,6 +389,9 @@ h2.workshop-meta{
 #footer-nav ul li a{
   color:#fff;
   font-size:14px;
+}
+#footer-nav ul.list-unstyled{
+  margin-left:0;
 }
 
 #copyright{
