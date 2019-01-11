@@ -1,6 +1,15 @@
 <?php
 add_action('wp_enqueue_scripts', 'tol_child_enqueue_styles');
 function tol_child_enqueue_styles(){
+  wp_register_script(
+    'bootstrap-script', 
+    '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', 
+    array('jquery'), 
+    '', 
+    true
+  );
+  wp_enqueue_script('bootstrap-script');
+
   wp_enqueue_style(
     'bootstrap-css',
     '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
@@ -8,13 +17,16 @@ function tol_child_enqueue_styles(){
 
   wp_enqueue_style(
     'google-fonts',
-    '//fonts.googleapis.com/css?family=Crimson+Text:400,700|Lato:300,400,700,900'
+    '//fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,700i|Quattrocento:400,700'
   );
 
   wp_enqueue_style(
     'font-awesome',
     '//use.fontawesome.com/releases/v5.6.3/css/all.css'
   );
+
+  wp_dequeue_style('tol-style');
+  wp_dequeue_style('amba-css');
 
   wp_enqueue_style(
     'parent-style', 
@@ -27,11 +39,19 @@ function tol_child_enqueue_styles(){
     array('parent-style'),
     wp_get_theme()->get('Version')
   );
+
+  wp_enqueue_style(
+    'amba-css',
+    get_template_directory_uri() . '/css/amba-css.css'
+  );
 }
 
 //add meta to enqueued styles
 add_filter('style_loader_tag', 'tol_add_css_meta', 10, 2);
 function tol_add_css_meta($link, $handle){
+  if($handle == 'bootstrap-script'){
+    $link = str_replace('></script>', ' integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>', $link);
+  }
   if($handle == 'bootstrap-css'){
     $link = str_replace('/>', ' integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />', $link);
   }
