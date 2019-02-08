@@ -25,6 +25,27 @@ img{
   max-width:100%;
   height:auto;
 }
+img.alignnone,
+img.aligncenter{
+  display:block;
+  margin:25px auto;
+  max-width:100%;
+  height:auto;
+}
+img.alignleft{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px 25px 25px 0;
+  float:left;
+}
+img.alignright{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px 0px 25px 25px;
+  float:right;
+}
 
 .btn-main{
   background-color:#faca3d;
@@ -417,6 +438,108 @@ footer#footer{
   padding-right:0;
 }
 
+.banner{
+  height:140px;
+  width:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+#mildocs-footer{
+  background-color:#2b5aa7;
+  border-top:10px solid #bf212a;
+  padding-top:15px;
+  padding-bottom:15px;
+  text-align:center;
+}
+#mildocs-footer p{
+  color:#fff;
+  margin-bottom:0;
+  font-weight:700;
+}
+#mildocs-footer a{
+  color:#fff;
+}
+#mildocs .nav-side{
+  background-image:url(images/blue-texture-vertical.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding-top:60px;
+  padding-bottom:100px;
+}
+.mildocs-nav{
+  max-width:225px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.mildocs-nav a{
+  color:#fff;
+}
+.mildocs-nav h2{
+  font-family:"Quattrocento", serif;
+  font-size:36px;
+  font-weight:700;
+  border-bottom:1px solid #fff;
+  margin-top:0;
+  margin-bottom:15px;
+  padding-bottom:10px;
+}
+.mildocs-nav ul>li.active{
+  font-size:20px;
+  font-weight:700;
+}
+#mildocs .content-side{
+  border-top:20px solid #bf212a;
+  padding-top:40px;
+  padding-bottom:100px;
+}
+.mildocs-main{
+  max-width:825px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.mildocs-main article h1{
+  margin-top:0;
+}
+.mildocs-main article h2{
+  font-size:20px;
+  font-weight:700;
+}
+.mildocs-main article ul{
+  padding-left:20px;
+}
+.mildocs-main article header{
+  margin-bottom:20px;
+}
+.mildocs-main article header>svg,
+.mildocs-main article header>img{
+  width:70px;
+  height:auto;
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:15px;
+}
+.mildocs-main article header>h1{
+  display:inline-block;
+  vertical-align:middle;
+  margin-bottom:0;
+}
+.mildocs-main footer hr{
+  border-top:5px solid #bf212a;
+  width:65px;
+  text-align:left;
+  margin-left:0;
+}
+.mildocs-main footer h3{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:0;
+}
+.mildocs-main footer a{
+  color:#000;
+  text-decoration:underline;
+}
+
 
 @media (max-width:767px){
   #navbar{
@@ -433,6 +556,13 @@ footer#footer{
   }
   .blog-card{
     margin:25px 15px;
+  }
+  #mildocs-footer p{
+    margin-top:30px;
+  }
+  #mildocs-footer .mildocs-logo{
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 
@@ -462,6 +592,20 @@ footer#footer{
   }
   #footer-nav .container-fluid{
     padding-right:0px;
+  }
+  #mildocs-footer .mildocs-logo{
+    display:inline-block;
+    margin-right:30px;
+  }
+  #mildocs-footer p{
+    display:inline-block;
+  }
+  #mildocs.container-sm-height{
+    padding-left:0;
+    padding-right:0;
+  }
+  #mildocs .col-sm-height{
+    vertical-align:top;
   }
 }
 
