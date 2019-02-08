@@ -579,4 +579,180 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+//mildocs template settings
+acf_add_local_field_group(array(
+	'key' => 'group_5c5dd59da9862',
+	'title' => esc_html__('MILDOCS Template Settings', 'tol_child'),
+	'fields' => array(
+		array(
+			'key' => 'field_5c5dd5a7f0082',
+			'label' => esc_html__('Icon File Type', 'tol_child'),
+			'name' => 'icon_file_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'svg' => 'svg',
+				'png' => 'png',
+			),
+			'default_value' => array(
+				0 => 'svg',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 1,
+			'ajax' => 0,
+			'return_format' => 'value',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5c5dd5dbf0083',
+			'label' => esc_html__('MILDOC Icon', 'tol_child'),
+			'name' => 'mildoc_icon',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c5dd5a7f0082',
+						'operator' => '==',
+						'value' => 'svg',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5c5dd5fdf0084',
+			'label' => esc_html__('MILDOC Icon', 'tol_child'),
+			'name' => 'mildoc_icon',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c5dd5a7f0082',
+						'operator' => '==',
+						'value' => 'png',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'id',
+			'preview_size' => 'full',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'mildocs-template.php',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+//MILDOCS tips lists
+acf_add_local_field_group(array(
+	'key' => 'group_5c5dd8915aecc',
+	'title' => esc_html__('MILDOCS Tips Lists', 'tol_child'),
+	'fields' => array(
+		array(
+			'key' => 'field_5c5dd899acacb',
+			'label' => esc_html__('Tips Lists Section', 'tol_child'),
+			'name' => 'tips_lists_section',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'table',
+			'button_label' => esc_html__('Add Tips List', 'tol_child'),
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5c5dd8b7acacc',
+					'label' => esc_html__('Tips List', 'tol_child'),
+					'name' => 'tips_list',
+					'type' => 'wysiwyg',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'tabs' => 'all',
+					'toolbar' => 'full',
+					'media_upload' => 1,
+					'delay' => 0,
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page',
+				'operator' => '==',
+				'value' => '4140',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
 endif;

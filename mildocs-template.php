@@ -20,6 +20,23 @@ get_header('mildocs'); ?>
       <h1 class="icon"><?php the_title(); ?></h1>
     </header>
     <?php the_content(); ?>
+
+    <?php if(is_page('mildocs')): ?>
+      <?php if(have_rows('tips_lists_section')): ?>
+        <div class="row">
+          <?php $i = 0; while(have_rows('tips_lists_section')): the_row(); ?>
+            <?php 
+              if($i % 2 == 0){ echo '<div class="clearfix visible-sm-block"></div>'; }
+              if($i % 3 == 0){ echo '<div class="clearfix visible-md-block visible-lg-block"></div>'; }
+            ?>
+            <div class="col-sm-6 col-md-4">
+              <?php echo wp_kses_post(get_sub_field('tips_list')); ?>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>
+
     <footer>
       <hr />
       <h3><?php echo esc_html__('RESOURCES', 'tol_child'); ?></h3>
