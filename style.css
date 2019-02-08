@@ -486,7 +486,8 @@ footer#footer{
   margin-bottom:15px;
   padding-bottom:10px;
 }
-.mildocs-nav ul>li.active{
+.mildocs-nav ul>li.active,
+.mildocs-nav ul>li.current_page_item{
   font-size:20px;
   font-weight:700;
 }
@@ -504,8 +505,16 @@ footer#footer{
   margin-top:0;
 }
 .mildocs-main article h2{
+  font-family:"QuattrocentoSans", sans-serif;
   font-size:20px;
   font-weight:700;
+  display:inline;
+}
+.mildocs-main article h3{
+  font-family:"QuattrocentoSans", sans-serif;
+  font-size:18px;
+  font-weight:700;
+  display:inline;
 }
 .mildocs-main article ul{
   padding-left:20px;
@@ -525,6 +534,7 @@ footer#footer{
   display:inline-block;
   vertical-align:middle;
   margin-bottom:0;
+  text-transform:uppercase;
 }
 .mildocs-main footer hr{
   border-top:5px solid #bf212a;
@@ -533,6 +543,7 @@ footer#footer{
   margin-left:0;
 }
 .mildocs-main footer h3{
+  font-family:"QuattrcentoSans", sans-serif;
   font-size:20px;
   font-weight:700;
   margin-bottom:0;
