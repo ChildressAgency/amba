@@ -29,7 +29,7 @@
             'menu_class' => 'list-unstyled',
             'echo' => true,
             'fallback_cb' => false,
-            'items-wrap' => $mildocs_nav_header . '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'items_wrap' => $mildocs_nav_header . '<ul id="%1$s" class="%2$s">%3$s</ul>',
             'depth' => 1,
           );
           wp_nav_menu($mildocs_nav_args);
