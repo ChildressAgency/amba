@@ -582,7 +582,7 @@ acf_add_local_field_group(array(
 //mildocs template settings
 acf_add_local_field_group(array(
 	'key' => 'group_5c5dd59da9862',
-	'title' => esc_html__('MILDOCS Template Settings', 'tol_child'),
+	'title' => esc_html__('MILDOCS Icon Settings', 'tol_child'),
 	'fields' => array(
 		array(
 			'key' => 'field_5c5dd5a7f0082',
@@ -677,7 +677,12 @@ acf_add_local_field_group(array(
 				'param' => 'page_template',
 				'operator' => '==',
 				'value' => 'mildocs-template.php',
-			),
+      ),
+      array(
+        'param' => 'page',
+        'operator' => '!=',
+        'value' => '4140',
+      ),
 		),
 	),
 	'menu_order' => 0,
@@ -741,6 +746,60 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'page',
 				'operator' => '==',
+				'value' => '4140',
+      ),
+      array(
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'mildocs-template.php',
+      ),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+//MILDOCS Resources section settings
+acf_add_local_field_group(array(
+	'key' => 'group_5c5deedbc79a5',
+	'title' => esc_html__('MILDOCS Resources Settings', 'tol_child'),
+	'fields' => array(
+		array(
+			'key' => 'field_5c5deee83dbc4',
+			'label' => esc_html__('Resources', 'tol_child'),
+			'name' => 'resources',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'mildocs-template.php',
+			),
+			array(
+				'param' => 'page',
+				'operator' => '!=',
 				'value' => '4140',
 			),
 		),
