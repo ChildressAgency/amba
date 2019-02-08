@@ -441,6 +441,8 @@ footer#footer{
 .banner{
   height:140px;
   width:100%;
+  background-image:url(images/american-flag-thin.jpg);
+  background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
 }
