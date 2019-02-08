@@ -62,6 +62,7 @@ function tol_add_css_meta($link, $handle){
   return $link;
 }
 
+//add_theme_support('post-thumbnails');
 remove_action('after_theme_setup', 'tol_custom_header_setup');
 add_action('after_setup_theme', 'tol_setup');
 function tol_setup(){
@@ -138,3 +139,9 @@ function tol_get_menu_by_location($location){
 }
 
 require_once dirname(__FILE__) . '/includes/tol-acf-setup.php';
+
+//remove p around img
+add_filter('the_content', 'filter_ptags_on_images');
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
