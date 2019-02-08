@@ -71,7 +71,8 @@ function tol_setup(){
     'footer-nav-2' => esc_html__('Footer Navigation 2', 'tol_child'),
     'footer-nav-3' => esc_html__('Footer Navigation 3', 'tol_child'),
     'footer-nav-4' => esc_html__('Footer Navigation 4', 'tol_child'),
-    'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child')
+    'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child'),
+    'mildocs-nav' => esc_html__('MILDOCS Navigation', 'tol_child')
   ));
 
   load_child_theme_textdomain('tol_child', get_stylesheet_directory() . '/languages');
