@@ -15,6 +15,17 @@ body{
 a, input{
   transition:all .3s ease;
 }
+a{
+  color:#e3a700;
+}
+a:visited{
+  color:#c56d00;
+}
+a:hover,
+a:focus,
+a:active{
+  color:midnightblue;
+}
 h1{
   font-family:"Quattrocento", serif;
   font-size:36px;
@@ -361,6 +372,10 @@ h2.workshop-meta{
 #blog-summary .card-body>p{
   color:#fff;
   text-transform:uppercase;
+}
+
+#resources .panel-title{
+  font-size:20px;
 }
 
 footer#footer{
