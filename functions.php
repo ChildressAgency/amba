@@ -77,6 +77,8 @@ function tol_setup(){
   ));
 
   load_child_theme_textdomain('tol_child', get_stylesheet_directory() . '/languages');
+
+  add_theme_support('post-thumbnails');
 }
 
 function tol_header_fallback_menu(){ ?>

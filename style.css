@@ -39,7 +39,7 @@ img{
 img.alignnone,
 img.aligncenter{
   display:block;
-  margin:25px auto;
+  margin:0px auto;
   max-width:100%;
   height:auto;
 }
@@ -376,6 +376,14 @@ h2.workshop-meta{
 
 #resources .panel-title{
   font-size:20px;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5{
+  clear:none;
 }
 
 footer#footer{
