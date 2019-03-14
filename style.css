@@ -10,6 +10,10 @@ body{
   font-size:16px;
   font-family:"Quattrocento Sans", sans-serif;
   color:#000;
+  padding-top:150px;
+}
+body.mildocs-body{
+  padding-top:0 !important;
 }
 
 a, input{
@@ -78,8 +82,17 @@ img.alignright{
 }
 
 #header-nav{
+  position:fixed;
+  top:0;
+  z-index:99999;
+  background-color:#fff;
+  width:100%;
   padding-top:20px;
   padding-bottom:20px;
+  transition:top .3s ease-in-out;
+}
+#header-nav.nav-up{
+  top:-210px;
 }
 
 .brand-info p{

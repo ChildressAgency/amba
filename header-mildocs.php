@@ -12,7 +12,7 @@
 
   <title><?php echo esc_html(bloginfo('name')); ?></title>
 </head>
-<body <?php body_class();?>>
+<body <?php body_class('mildocs-body');?>>
   <div class="banner"></div>
   <div id="mildocs" class="container-fluid container-sm-height">
     <div class="row row-sm-height">

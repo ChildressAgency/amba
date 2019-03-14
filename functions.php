@@ -8,7 +8,17 @@ function tol_child_enqueue_styles(){
     '', 
     true
   );
+
+  wp_register_script(
+    'tol-child-script',
+    get_stylesheet_directory_uri() . '/js/tol-child-scripts.js',
+    array('jquery'),
+    '',
+    true
+  );
+
   wp_enqueue_script('bootstrap-script');
+  wp_enqueue_script('tol-child-script');
 
   wp_enqueue_style(
     'bootstrap-css',
