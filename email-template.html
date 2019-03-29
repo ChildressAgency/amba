@@ -165,6 +165,13 @@
       color:#fff;
       text-decoration:underline;
     }
+    .section-title__title h1{
+      font-family:"Open Sans", Arial, sans-serif;
+      /*@editable*/ background-color:#2b5aa7;
+      padding:5px 10px;
+      /*@editable*/ text-align:center;
+      /*@editable*/ color:#fff;
+    }
 
     @media only screen and (max-width:480px) {
       #emailContainer {
@@ -334,6 +341,20 @@
                                 <td class="article" mc:edit="article_no_button_section_content">
                                   <h1>ARTICLE TITLE GOES HERE</h1>
                                   <p>Article goes here.</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <tr mc:repeatable="article_section" mc:variant="section title">
+                        <td>
+                          <table class="section-title" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="section-title__title" mc:edit="section_title">
+                                  <h1>Section Title</h1>
                                 </td>
                               </tr>
                             </tbody>
