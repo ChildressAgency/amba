@@ -8,7 +8,17 @@ function tol_child_enqueue_styles(){
     '', 
     true
   );
+
+  wp_register_script(
+    'tol-child-script',
+    get_stylesheet_directory_uri() . '/js/tol-child-scripts.js',
+    array('jquery'),
+    '',
+    true
+  );
+
   wp_enqueue_script('bootstrap-script');
+  wp_enqueue_script('tol-child-script');
 
   wp_enqueue_style(
     'bootstrap-css',
@@ -62,6 +72,7 @@ function tol_add_css_meta($link, $handle){
   return $link;
 }
 
+//add_theme_support('post-thumbnails');
 remove_action('after_theme_setup', 'tol_custom_header_setup');
 add_action('after_setup_theme', 'tol_setup');
 function tol_setup(){
@@ -71,10 +82,13 @@ function tol_setup(){
     'footer-nav-2' => esc_html__('Footer Navigation 2', 'tol_child'),
     'footer-nav-3' => esc_html__('Footer Navigation 3', 'tol_child'),
     'footer-nav-4' => esc_html__('Footer Navigation 4', 'tol_child'),
-    'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child')
+    'footer-nav-5' => esc_html__('Footer Navigation 5', 'tol_child'),
+    'mildocs-nav' => esc_html__('MILDOCS Navigation', 'tol_child')
   ));
 
   load_child_theme_textdomain('tol_child', get_stylesheet_directory() . '/languages');
+
+  add_theme_support('post-thumbnails');
 }
 
 function tol_header_fallback_menu(){ ?>
@@ -137,3 +151,9 @@ function tol_get_menu_by_location($location){
 }
 
 require_once dirname(__FILE__) . '/includes/tol-acf-setup.php';
+
+//remove p around img
+add_filter('the_content', 'filter_ptags_on_images');
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
